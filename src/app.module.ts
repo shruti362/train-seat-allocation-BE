@@ -5,6 +5,8 @@ import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { RegistrationModule } from './registration/registration.module.js';
 
+import { LoginModule } from './login/login.module.js';
+
 @Module({
   imports: [
 
@@ -23,7 +25,9 @@ import { RegistrationModule } from './registration/registration.module.js';
       },
     }),
 
-    RegistrationModule
+    RegistrationModule,
+
+    LoginModule
   ],
 
   controllers: [AppController],
