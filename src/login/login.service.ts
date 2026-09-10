@@ -14,6 +14,20 @@ export class LoginService {
     ) { }
 
     async login(userdata: any) {
+
+        const registerdata=this.registrationRepository.findOne({
+            where:{
+                USERNAME: userdata.USERNAME
+            }
+        })
+
+        if(!registerdata){
+            throw new UnauthorizedException("Please sing up first than sign in");
+        }
+
+
+
+
         const result = await this.registrationRepository.query(
             `select * from mstuser where USERNAME=@0 and PASSWORD=@1`,
             [userdata.USERNAME, userdata.PASSWORD]

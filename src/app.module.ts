@@ -12,13 +12,13 @@ import { LoginModule } from './login/login.module.js';
 
     TypeOrmModule.forRoot({
       type: 'mssql',
-      host: '192.168.1.207',
+      host: 'localhost',
       port: 1433,
-      username: 'sa',
-      password: '123456',
-      database: 'INTERN20260807',
+      username: 'shruti',
+      password: 'shruti@123',
+      database: 'BillingDc',
       autoLoadEntities: true,
-      synchronize: true,
+      synchronize: false,
       options: {
         encrypt: false,
         trustServerCertificate: true,
