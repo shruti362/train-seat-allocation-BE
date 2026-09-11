@@ -24,11 +24,37 @@ export class Registration {
   @Column({ name: 'ROLE', type: 'varchar', length: 20 })
   ROLE: string;
 
+
+  @Column({ name: 'DATE_OF_BIRTH', type: 'date', nullable: true })
+  DATE_OF_BIRTH: Date;
+
+@Column({
+  name: 'GENDER',
+  type: 'varchar',
+  length: 50,
+  nullable: true
+})
+gender: string;
+
+  @Column({ name: 'ADDRESS', type: 'varchar', length: 100,nullable: true })
+  ADDRESS: string;
+
+  @Column({ name: 'CITY', type: 'varchar', length: 50,nullable: true})
+  CITY: string;
+
+  @Column({ name: 'STATE', type: 'varchar', length: 50,nullable: true })
+  STATE: string;
+
+  @Column({ name: 'PINCODE', type: 'varchar', length: 50,nullable: true })
+  PINCODE: string;
+
   @Column({
     name: 'CREATED_DATE',
     type: 'datetime',
     default: () => 'GETDATE()'
   })
   CREATED_DATE: Date;
+
+
 
 }

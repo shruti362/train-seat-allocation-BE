@@ -23,7 +23,8 @@ export class RegistrationService {
         EMAIL,
         MOBILE,
         PASSWORD,
-        ROLE
+        ROLE,
+        DATE_OF_BIRTH
       )
       VALUES
       (
@@ -32,7 +33,9 @@ export class RegistrationService {
         @2,
         @3,
         @4,
-        'ADMIN'
+        'ADMIN',
+        @5
+        
       )
       `,
       [
@@ -40,7 +43,8 @@ export class RegistrationService {
         userData.FULL_NAME,
         userData.EMAIL,
         userData.MOBILE,
-        userData.PASSWORD
+        userData.PASSWORD,
+        userData.DATE_OF_BIRTH
       ]
     );
 
